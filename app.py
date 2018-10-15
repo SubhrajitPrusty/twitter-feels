@@ -14,7 +14,7 @@ TOKENSECRET = os.getenv("TOKENSECRET")
 
 day = 'today'
 
-LINK = f'https://api.twitter.com/1.1/search/tweets.json?q={day}&count=100'
+LINK = f'https://api.twitter.com/1.1/search/tweets.json?q={day}&count=100&result_type=popular'
 
 auth = OAuth1(APIKEY, APISECRET, TOKEN, TOKENSECRET)
 
@@ -31,4 +31,4 @@ print(f"Number of statuses : {len(statuses)}")
 
 for tweet in statuses:
 	text = tweet['text']
-	print(text.count(":)"))
+	print(text)
