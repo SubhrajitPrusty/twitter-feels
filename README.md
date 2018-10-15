@@ -7,6 +7,10 @@ What is twitter feeling like today?
 - requests_oauthlib
 - python-dotenv
 
+## Installation
+
+`pip install -r requirements.txt`
+
 ## Usage
 
 ```
