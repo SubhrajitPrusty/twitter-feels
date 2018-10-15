@@ -22,3 +22,12 @@ r = requests.get(LINK, auth=auth)
 
 print(r)
 rjson = r.json()
+
+# print(json.dumps(rjson, indent=4, sort_keys=True))
+
+statuses = rjson['statuses']
+# print( json.dumps(statuses, indent=4))
+
+for tweet in statuses:
+	text = tweet['text']
+	print(text.count(":)"))
