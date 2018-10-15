@@ -14,7 +14,7 @@ TOKENSECRET = os.getenv("TOKENSECRET")
 
 day = 'today'
 
-LINK = f'https://api.twitter.com/1.1/search/tweets.json?q={day}&result_type=popular'
+LINK = f'https://api.twitter.com/1.1/search/tweets.json?q={day}&count=100'
 
 auth = OAuth1(APIKEY, APISECRET, TOKEN, TOKENSECRET)
 
@@ -27,6 +27,7 @@ rjson = r.json()
 
 statuses = rjson['statuses']
 # print( json.dumps(statuses, indent=4))
+print(f"Number of statuses : {len(statuses)}")
 
 for tweet in statuses:
 	text = tweet['text']
